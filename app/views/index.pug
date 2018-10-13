@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .banner
+    h1= title
+    p Welcome to #{title} research portal
+
+  each research in researches
+    .research-post-card
+      img(src=research.img, alt="")
+      .post-content
+        a.post-title(href="#")
+          h2
+            =research.title
+        p.date-text
+          =research.date
+        p.excerpt
+          =research.excerpt
+        input(type='button' value='Read more' name='readMore')
